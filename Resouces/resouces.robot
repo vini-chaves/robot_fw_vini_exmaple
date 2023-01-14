@@ -1,6 +1,5 @@
 *** Settings ***
 Library    SeleniumLibrary
-Library    BuiltIn
 Library    Collections
 
 Documentation    Robot Framework Resouces Keywords
