@@ -1,4 +1,7 @@
-Reports/*
+Reports/*html
+Reports/*xml
+Reports/*xlsm
+Reports/*xlsx
 Resouces/Download
 .venv
 .idea
