@@ -14,7 +14,6 @@ Library    String
 Library    Process
 
 Resource    ../Resouces/resouces.robot
-Resource    ../Resouces/login_resouces.robot
 
 Test Setup    Open Chrome Browser    ${url}    Chrome
 Test Teardown    Close All Browsers
