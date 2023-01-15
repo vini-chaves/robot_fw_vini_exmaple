@@ -25,8 +25,6 @@ ${URL02}    https://vctcpune.com/selenium/practice.html
 ${COUNTRY}    Brasil
 ${USERNAME}    Vinicius
 ${OUTPUT_DIR}    C:/Users/vinic/PycharmProjects/robot_intro/Reports
-# @{SKIP_ITEMS}    TestElements01    TestElements    TestElements03    TestElements04    TestElements05
-# ...    TestElements06    TestElements07    TestElements08
 
 *** Test Cases ***
 TestElements01
@@ -128,8 +126,8 @@ TestElements05
     ${"password_txt"}   set variable    identifier:password
     input text    ${"email_txt"}   Admin
     input text    ${"password_txt"}   admin123
-    capture element screenshot    class:orangehrm-login-branding    C:/Users/vinic/PycharmProjects/robot_intro/Reports/screenshot-logo.png
-    capture page screenshot    C:/Users/vinic/PycharmProjects/robot_intro/Reports/screenshot-page.png
+    capture element screenshot    class:orangehrm-login-branding    ./Reports/screenshot-logo.png
+    capture page screenshot    ./Reports/screenshot-page.png
 
 TestElements06
     [Documentation]    Test Case 06 Mouse actions
