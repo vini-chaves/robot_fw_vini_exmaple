@@ -1,3 +1,7 @@
+# Robot Framework - Example script to future reference on other tasks
+
+I made this repository to be a reference material to other future projects if needed
+
 ## How to call robot 
 ---------------
 #### To run all TC
