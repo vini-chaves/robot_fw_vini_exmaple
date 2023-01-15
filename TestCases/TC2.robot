@@ -15,7 +15,7 @@ Library    Process
 
 Resource    ../Resouces/resouces.robot
 
-Test Setup    Open Chrome Browser    ${url}    Chrome
+Test Setup    Open Chrome Browser    ${url}    headlesschrome
 Test Teardown    Close All Browsers
 
 *** Variables ***
@@ -86,11 +86,13 @@ TestElements02
 
 TestElements03
     [Documentation]    Test Case 03 iframe actions
-    [Tags]    PerformActions    robot:skip
+    [Tags]    PerformActions    
 
-    Go To    ${URL02}
+    Close Browser
+    Open Chrome Browser    ${URL02}    Chrome
     Scroll Element Into View    class:services-div7
     Select Frame    id:courses-iframe
+    Wait Until Element Is Visible   xpath://*[@id="top-menu"]/li/*[@href="https://vctcpune.com/courses/"]
     Click Link    https://vctcpune.com/courses/
     Unselect Frame
     Switch Window    title:Practice Page
@@ -102,7 +104,7 @@ TestElements04
     [Documentation]    Test Case 04 multi-windows actions
     [Tags]    OpenVariousWindows
 
-    Open Chrome Browser    https://bing.com/    Chrome
+    Open Chrome Browser    https://bing.com/    headlesschrome
     switch browser    1
     ${title1}=    get title
     log to console    ${title1}
@@ -126,8 +128,8 @@ TestElements05
     ${"password_txt"}   set variable    identifier:password
     input text    ${"email_txt"}   Admin
     input text    ${"password_txt"}   admin123
-    capture element screenshot    class:orangehrm-login-branding    C:/Users/vinic/PycharmProjects/robot_intro/screenshot-logo.png
-    capture page screenshot    C:/Users/vinic/PycharmProjects/robot_intro/screenshot-page.png
+    capture element screenshot    class:orangehrm-login-branding    C:/Users/vinic/PycharmProjects/robot_intro/Reports/screenshot-logo.png
+    capture page screenshot    C:/Users/vinic/PycharmProjects/robot_intro/Reports/screenshot-page.png
 
 TestElements06
     [Documentation]    Test Case 06 Mouse actions
@@ -152,7 +154,7 @@ TestElements06
 
 TestElements07
     [Documentation]    Test Case 07 Get Liks actions and Excel write action
-    [Tags]    GetLiksPlusExcel
+    [Tags]    GetLiksPlusExcel    robot:skip
 
     ${OUTPUT_EXCEL}    set variable    out.xlsx
     ${DOWNLOAD_DIR}    set variable    C:/Users/vinic/PycharmProjects/robot_intro/Resouces/Download

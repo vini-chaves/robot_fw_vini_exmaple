@@ -11,9 +11,8 @@ ${URL}    https://opensource-demo.orangehrmlive.com/
 LoginTest
     [Documentation]    Test Case to demonstrate robot Framework various applications
 
-    Open Chrome Browser
-    Set Selenium Implicit Wait    1s
-    Go To    ${URL}
+    Open Chrome Browser    ${URL}    headlesschrome
+    Set Selenium Implicit Wait    2s
     Title Should Be    OrangeHRM
     ${"email_txt"}    set variable    identifier:username
     ${"password_txt"}   set variable    identifier:password

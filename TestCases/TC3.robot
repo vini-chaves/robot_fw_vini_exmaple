@@ -10,7 +10,7 @@ Library    DataDriver    file_search_strategy=None
 Resource    ../Resouces/resouces.robot
 Resource    ../Resouces/login_resouces.robot
 
-Suite Setup    Open Chrome Browser    https://admin-demo.nopcommerce.com/
+Suite Setup    Open Chrome Browser    https://admin-demo.nopcommerce.com/    headlesschrome
 Suite Teardown    Close All Browsers
 Test Setup        Open Login Page
 Test Template    Invalid Login

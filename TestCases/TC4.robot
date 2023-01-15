@@ -10,7 +10,7 @@ Library    DataDriver    TestData/LoginData.xlsx    sheet_name=Sheet1
 Resource    ../Resouces/resouces.robot
 Resource    ../Resouces/login_resouces.robot
 
-Suite Setup    Open Chrome Browser    https://admin-demo.nopcommerce.com/
+Suite Setup    Open Chrome Browser    https://admin-demo.nopcommerce.com/    headlesschrome
 Suite Teardown    Close All Browsers
 
 Test Setup        Open Login Page
