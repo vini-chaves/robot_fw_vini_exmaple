@@ -24,7 +24,7 @@ ${URL01}    https://vctcpune.com/
 ${URL02}    https://vctcpune.com/selenium/practice.html
 ${COUNTRY}    Brasil
 ${USERNAME}    Vinicius
-${OUTPUT_DIR}    C:/Users/vinic/PycharmProjects/robot_intro/Reports
+${OUTPUT_DIR}    Reports
 
 *** Test Cases ***
 TestElements01
@@ -126,8 +126,8 @@ TestElements05
     ${"password_txt"}   set variable    identifier:password
     input text    ${"email_txt"}   Admin
     input text    ${"password_txt"}   admin123
-    capture element screenshot    class:orangehrm-login-branding    ./Reports/screenshot-logo.png
-    capture page screenshot    ./Reports/screenshot-page.png
+    capture element screenshot    class:orangehrm-login-branding    screenshot-logo.png
+    capture page screenshot    screenshot-page.png
 
 TestElements06
     [Documentation]    Test Case 06 Mouse actions
@@ -152,7 +152,8 @@ TestElements06
 
 TestElements07
     [Documentation]    Test Case 07 Get Liks actions and Excel write action
-    [Tags]    GetLiksPlusExcel    robot:skip
+    [Tags]    GetLiksPlusExcel    
+    ...    robot:skip
 
     ${OUTPUT_EXCEL}    set variable    out.xlsx
     ${DOWNLOAD_DIR}    set variable    C:/Users/vinic/PycharmProjects/robot_intro/Resouces/Download
