@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Robot Framework various Data Driven test example
+Documentation    Robot Framework resouce to Data Driven test example
 Library    SeleniumLibrary
 Library    BuiltIn
 Library    Collections
@@ -11,11 +11,11 @@ ${LOGIN_URL}    https://admin-demo.nopcommerce.com/
 
 *** Keywords ***
 Open Login Page
-    Go to    ${LOGIN_URL}
+    Go To    ${LOGIN_URL}
 Input Username
     [Arguments]    ${username}
     input text    id:Email   ${username}
-Input PWD
+Input pwd
     [Arguments]    ${pwd}
     input text    id:Password   ${pwd}
 Click Login Button

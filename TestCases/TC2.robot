@@ -238,11 +238,6 @@ TestElements08
     log to console    ${RESPONSE_LIST} sum is: ${sum}
 
 *** Keywords ***
-Invalid Login
-    [Arguments]    ${username}    ${pwd}
-    Input username    ${username}
-    Input PWD    ${pwd}
-    Click Login Button
-    Unsucessful login validation should be visible
+
 
 

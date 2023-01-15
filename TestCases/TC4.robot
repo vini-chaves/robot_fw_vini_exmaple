@@ -5,23 +5,19 @@ Metadata    Author    vchaves
 Metadata    Executed By    vchaves
 
 Library    SeleniumLibrary
-Library    DataDriver    file_search_strategy=None
+Library    DataDriver    TestData/LoginData.xlsx    sheet_name=Sheet1
 
 Resource    ../Resouces/resouces.robot
 Resource    ../Resouces/login_resouces.robot
 
 Suite Setup    Open Chrome Browser    https://admin-demo.nopcommerce.com/
 Suite Teardown    Close All Browsers
+
 Test Setup        Open Login Page
 Test Template    Invalid Login
 
-*** Test Case ***        username    password
-TC1: Correct User / Empty password    admin@yourstore.com    ${EMPTY}
-TC2: Correct User / Wrong password    admin@yourstore.com    admin123
-TC3: Wrong User / Correct password    admin123@yourstore.com    admin
-TC4: Wrong User / Empty password    admin123@yourstore.com    ${EMPTY}
-TC5: Wrong User / Wrong password    admin123@yourstore.com    admin123
-    
+*** Test Case ***
+TestCase Invalid Login using: ${username} / ${password}
 
 *** Keywords ***
 Invalid Login
